@@ -26,6 +26,7 @@ urlpatterns = [
     path("api/", include("Restapi_app.urls")),
     path("investment/", include("investment.urls")),
     
+    
     ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

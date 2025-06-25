@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from pydantic import BaseModel, Field 
+from typing import List, Optional
 # Create your models here.
 
 class InvestmentPlan(models.Model):
