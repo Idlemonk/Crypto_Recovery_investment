@@ -41,3 +41,31 @@ def crypto_investment_view(request):
     }
 
     return render(request, "investment/crypto_investment.html", context)
+
+
+def crypto_etf_view(request):
+    context ={
+        "title": "BTC & ETH ETF Investment",
+        "btc_etf": {
+            "name": "Bitcoin ETF (BTC ETF)",
+            "description": (
+                "A Bitcoin ETF is an exchange-traded fund that tracks the price of Bitcoin. "
+                "Instead of directly purchasing BTC, investors can buy shares in ETF which is regulated and traded on traditional stock exchanges."
+                "It allows exposure to Bitcoin's performance without managing digital wallets or crypto custody."
+            ),
+
+        },
+        "eth_etf": {
+            "name": "Ethereum ETF (ETH ETF)",
+            "description": (
+                "An Ethereum ETF tracks the price of Ether, the native cryptocurrency of the Ethereum network. "
+                "Like BTC ETFs, ETH ETFs are traded on regulated exchange and provide institutional and retail investors with a secure, legal, and familiar investmentinto Ethereum."
+            ),
+        },
+        "sale_info": (
+            "We offer the opportunity to invest in both BTC and ETH ETF through our regulated sales platform. "
+        )    "These regulated-traded funds (RTFs) are fully compliant with industry standards, providing transparency and safety to our investors. "
+        "image_url": "static/images/etf-banner.png", #Replace with actual image path
+    }
+    return render (request, "crypto_etf.html", context)
+      
